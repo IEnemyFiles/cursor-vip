@@ -30,8 +30,8 @@ jobs:
       - name: Build Windows executable
         run: flutter build windows --release
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
+      - name: Export Windows executable as artifact
+        uses: actions/upload-artifact@v3
         with:
           name: cursor-vip-windows
           path: build\windows\runner\Release\cursor-vip.exe
